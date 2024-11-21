@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 // The @With annotation creates a method for each field that returns a new object instance with one field modified, leaving the original object unchanged.
 // This supports the practice of immutability, promoting safer and more predictable code.
 @Slf4j
-class WithExample {
+class WithTest {
 
     @With(AccessLevel.PUBLIC)
     private final String name;
@@ -17,16 +17,16 @@ class WithExample {
     @With
     private final int age;
 
-    public WithExample(String name, int age) {
+    public WithTest(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
     public static void main() {
-        WithExample withExample = new WithExample("John", 30);
-        WithExample modifiedWithExample = withExample.withName("Jane");
+        WithTest withTest = new WithTest("John", 30);
+        WithTest modifiedWithTest = withTest.withName("Jane");
 
-        log.info("Modified Name: {}", modifiedWithExample.name); // Modified Name: Jane
-        log.info("Unchanged Age: {}", modifiedWithExample.age); // Unchanged Age: 30
+        log.info("Modified Name: {}", modifiedWithTest.name); // Modified Name: Jane
+        log.info("Unchanged Age: {}", modifiedWithTest.age); // Unchanged Age: 30
     }
 }
