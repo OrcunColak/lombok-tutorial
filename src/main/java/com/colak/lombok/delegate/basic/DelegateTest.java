@@ -1,4 +1,4 @@
-package com.colak.lombok.delegate;
+package com.colak.lombok.delegate.basic;
 
 import lombok.experimental.Delegate;
 import lombok.extern.slf4j.Slf4j;
